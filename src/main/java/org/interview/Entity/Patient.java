@@ -1,4 +1,4 @@
-package org.interview.entity;
+package org.interview.Entity;
 
 import jakarta.persistence.*;
 
