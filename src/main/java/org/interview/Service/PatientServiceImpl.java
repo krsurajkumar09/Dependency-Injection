@@ -13,15 +13,23 @@ public class PatientServiceImpl implements PatientService {
 
 //    private final PatientRepository patientRepository;
 
-    // Constructor Injection
+//    Constructor Injection
 //    public PatientServiceImpl(PatientRepository patientRepository) {
 //        this.patientRepository = patientRepository;
 //    }
 
+
+////   Field Injection
+//    @Autowired
+//    private PatientRepository patientRepository;
+
+//    Setter Injection
     @Autowired
+    public void setPatientRepository(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
+    }
+
     private PatientRepository patientRepository;
-
-
     @Override
     public Patient createPatient(Patient patient) {
         return patientRepository.save(patient);
